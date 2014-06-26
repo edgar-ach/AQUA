@@ -1,0 +1,209 @@
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta descripcion="calculadora">
+<title>CALCULADORA</title>
+
+<script type="text/javascript">
+	//variable para en resultado
+	var res = 0;
+	//variable que sirve para saber que operaacion se va ha realizar
+	var valor = 0;
+
+	//limpia la pantalla
+	function limpiar() {
+
+		document.getElementById('txtValores').value = "";
+		cad = "";
+	}
+
+	function sumar() {
+		if (document.getElementById('txtValores').value != "") {
+			res = parseInt(document.getElementById('txtValores').value);
+			limpiar();
+			valor = 1;
+		}
+	}
+
+	function restar() {
+		if (document.getElementById('txtValores').value != "") {
+			res = parseInt(document.getElementById('txtValores').value);
+			limpiar();
+			valor = 2;
+		}
+	}
+
+	function multiplicar() {
+
+		if (document.getElementById('txtValores').value != "") {
+			res = parseInt(document.getElementById('txtValores').value);
+			limpiar();
+			valor = 3;
+		}
+	}
+
+	function dividir() {
+		if (document.getElementById('txtValores').value != "") {
+			res = parseInt(document.getElementById('txtValores').value);
+			limpiar();
+			valor = 4;
+		}
+	}
+
+	function resultado() {
+
+		if (valor == 1) {
+			res += parseInt(document.getElementById('txtValores').value);
+			document.getElementById('txtValores').value = res;
+		}
+
+		if (valor == 2) {
+			res -= parseInt(document.getElementById('txtValores').value);
+			document.getElementById('txtValores').value = res;
+		}
+
+		if (valor == 3) {
+			res *= parseInt(document.getElementById('txtValores').value);
+			document.getElementById('txtValores').value = res;
+		}
+
+		if (valor == 4) {
+			res /= parseInt(document.getElementById('txtValores').value);
+			document.getElementById('txtValores').value = res;
+		}
+	}
+
+	function num9() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "9";
+		document.getElementById('txtValores').value = cad;
+	}
+	function num8() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "8";
+		document.getElementById('txtValores').value = cad;
+	}
+
+	function num7() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "7";
+		document.getElementById('txtValores').value = cad;
+	}
+	function num6() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "6";
+		document.getElementById('txtValores').value = cad;
+	}
+	function num5() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "5";
+		document.getElementById('txtValores').value = cad;
+	}
+	function num4() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "4";
+		document.getElementById('txtValores').value = cad;
+	}
+	function num3() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "3";
+		document.getElementById('txtValores').value = cad;
+	}
+	function num2() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "2";
+		document.getElementById('txtValores').value = cad;
+	}
+	function num1() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "1";
+		document.getElementById('txtValores').value = cad;
+	}
+	function num0() {
+		var cad = document.getElementById('txtValores').value;
+		cad += "0";
+		document.getElementById('txtValores').value = cad;
+	}
+	var cad = "";
+</script>
+</head>
+<body>
+
+	<center>
+		<h1>CALCULADORA</h1>
+	</center>
+	<br>
+	<br>
+
+	<table border="1" align="center">
+		<tr>
+			<td>
+				<table>
+
+					<TR>
+						<TD COLSPAN="4"><INPUT TYPE="text" ID="txtValores" value=""
+							maxlenght="20" size="18"></TD>
+					</TR>
+
+					<tr>
+						<td><input type="button" id="btn9" value="9"
+							onclick="num9();"></td>
+
+						<td><input type="button" id="btn8" value="8"
+							onclick="num8();"></td>
+
+						<td><input type="button" id="btn7" value="7"
+							onclick="num7();"></td>
+
+						<td><input type="button" id="btnMas" value=" +"
+							onclick="sumar();"></td>
+					</tr>
+
+
+					<tr>
+
+						<td><input type="button" id="btn6" value="6"
+							onclick="num6();"></td>
+
+						<td><input type="button" id="btn5" value="5"
+							onclick="num5();"></td>
+
+						<td><input type="button" id="btn4" value="4"
+							onclick="num4();"></td>
+
+						<td><input type="button" id="btnMenos" value=" - "
+							onclick="restar();"></td>
+					</tr>
+
+					<tr>
+						<td><input type="button" id="btn3" value="3"
+							onclick="num3();"></td>
+
+						<td><input type="button" id="btn2" value="2"
+							onclick="num2();"></td>
+
+						<td><input type="button" id="btn1" value="1"
+							onclick="num1();"></td>
+
+						<td><input type="button" id="btnMultiplicar" value=" * "
+							onclick="multiplicar();"></td>
+					</tr>
+
+					<tr>
+						<td><input type="button" id="btn0" value="0"
+							onclick="num0();"></td>
+
+						<td colspan="2"><input type="button" id="btnIgual"
+							value="     =     " onclick="resultado();"></td>
+
+						<td><input type="button" id="btnDividir" value=" / "
+							onclick="dividir();"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+</body>
+</html>
